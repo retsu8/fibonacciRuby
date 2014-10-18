@@ -1,9 +1,9 @@
 include Math
-class Main
 def fibonacci( n )
-  return  n  if ( 0..1 ).include? n
-  ( Fibonacci( n - 1 ) + Fibonacci( n - 2 ) )
-end
+    return  n  if n <= 2 
+    fibonacci( n - 1 ) + fibonacci( n - 2 )
+end 
+class Main
 puts "Please enter the nth number for the Fibanachi Sequence"
 n = gets.chomp 
 puts "Starting Formula"
@@ -26,6 +26,6 @@ puts "Starting Formula"
   puts currVal.to_s
   puts "Finished Induction"
   puts"Starting Recursion"
-  puts fibonacci( n )
+  puts fibonacci( n.to_i )
   puts"Finished Recursion"
 end
